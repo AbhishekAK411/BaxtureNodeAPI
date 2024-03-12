@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Request, Response } from "express";
 import cors from "cors";
 import morgan from "morgan";
 import dotenv from "dotenv";
@@ -15,6 +15,13 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
 app.use("/api", router);
+app.use((req: Request, res: Response) => {
+    return res.status(404).json({
+        status: 404,
+        success: false,
+        message: "Could not locate resource. Please try again later."
+    })
+})
 
 connect().then(() => {
     try {

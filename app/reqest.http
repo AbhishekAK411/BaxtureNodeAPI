@@ -28,3 +28,7 @@ Content-Type: application/json
 
 ### Delete user
 DELETE http://localhost:4000/api/users/3be06864-4d24-422c-9668-47ec1ff5876a
+
+
+### Request to non-existent endpoints
+GET http://localhost:4000/api/api2
