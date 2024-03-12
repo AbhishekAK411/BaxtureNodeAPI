@@ -2,6 +2,11 @@ import { IUser } from "../interfaces/interfaces";
 import mongoose, { Schema } from "mongoose";
 
 const userSchema = new Schema({
+    userId: {
+        type: String,
+        required: true,
+        unique: true
+    },
     username: {
         type: String,
         required: true,
@@ -11,7 +16,7 @@ const userSchema = new Schema({
         type: Number,
         required: true
     },
-    hobbbies: {
+    hobbies: {
         type: [String],
         required: true
     }

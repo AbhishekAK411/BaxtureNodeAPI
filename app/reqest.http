@@ -1,0 +1,30 @@
+### Get user
+GET http://localhost:4000/api/users/cb7c0355-fbc8-43fe-920d-b1dc7eed9d5b
+
+
+### Get all users
+GET http://localhost:4000/api/users
+
+
+### Create user
+POST http://localhost:4000/api/users
+Content-Type: application/json
+
+{
+    "username": "test",
+    "age": 23,
+    "hobbies": ["reading", "writing", "coding"]
+}
+
+### Update user
+PUT http://localhost:4000/api/users/3be06864-4d24-422c-9668-47ec1ff5876a
+Content-Type: application/json
+
+{
+    "username": "update",
+    "age": 25,
+    "hobbies": ["changed"]
+}
+
+### Delete user
+DELETE http://localhost:4000/api/users/3be06864-4d24-422c-9668-47ec1ff5876a
