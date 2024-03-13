@@ -19,13 +19,16 @@ app.use((req: Request, res: Response) => {
         status: 404,
         success: false,
         message: "Could not locate resource. Please try again later."
-    })
+    });
 })
 
+//* In memory MongoDB Connection
 connect().then(() => {
     try {
-        const port = process.env.PORT || 3000;
-        app.listen(port, () => console.log(`Listening on port ${port}`));
+        const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
+        app.listen(port, () => {
+            console.log(`Listening on port ${port}`)
+        });
     } catch (error) {
         console.log("Can't connect to database.");
     }
