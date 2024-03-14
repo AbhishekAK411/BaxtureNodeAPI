@@ -26,7 +26,8 @@ In summary, implementing a CRUD backend infrastructure with an in-memory databas
 
 ## Badges
 
-<div>
+<div style="display: flex;">
+
   ![NPM](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)
 
   ![Javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
