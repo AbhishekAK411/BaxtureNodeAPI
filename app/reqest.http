@@ -1,5 +1,5 @@
 ### Get user
-GET http://localhost:4000/api/users/cb7c0355-fbc8-43fe-920d-b1dc7eed9d5b
+GET http://localhost:4000/api/users/
 
 
 ### Get all users
@@ -17,7 +17,7 @@ Content-Type: application/json
 }
 
 ### Update user
-PUT http://localhost:4000/api/users/3be06864-4d24-422c-9668-47ec1ff5876a
+PUT http://localhost:4000/api/users/
 Content-Type: application/json
 
 {
@@ -27,7 +27,7 @@ Content-Type: application/json
 }
 
 ### Delete user
-DELETE http://localhost:4000/api/users/3be06864-4d24-422c-9668-47ec1ff5876a
+DELETE http://localhost:4000/api/users/
 
 
 ### Request to non-existent endpoints

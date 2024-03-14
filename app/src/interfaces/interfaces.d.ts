@@ -7,3 +7,5 @@ export interface IUser extends Document {
     age: number;
     hobbies: string[]
 }
+
+export interface IResponse {}

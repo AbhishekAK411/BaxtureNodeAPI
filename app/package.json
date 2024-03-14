@@ -3,39 +3,43 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start:dev": "nodemon ./src/index.ts",
+    "start:dev": "nodemon src/index.ts",
     "build": "tsc",
     "start:prod": "npm run build && node dist/index.js",
     "start:multi": "nodemon ./src/loadbalancer.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ts-mocha src/apitest.spec.ts"
   },
   "author": "AbhishekAK411",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^5.1.1",
+    "@types/supertest": "^6.0.2",
+    "axios": "^1.6.7",
+    "chai": "^4.4.1",
     "cluster": "^0.7.7",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.18.3",
+    "mocha": "^10.3.0",
     "mongodb-memory-server": "^9.1.7",
     "mongoose": "^8.2.1",
     "morgan": "^1.10.0",
-    "uuid": "^9.0.1",
-    "winston": "^3.12.0"
+    "supertest": "^6.3.4",
+    "ts-mocha": "^10.0.0",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
-    "@types/bcrypt": "^5.0.2",
+    "@types/axios": "^0.14.0",
+    "@types/chai": "^4.3.12",
     "@types/cors": "^2.8.17",
     "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.21",
+    "@types/mocha": "^10.0.6",
     "@types/mongodb-memory-server": "^2.3.0",
     "@types/mongoose": "^5.11.97",
     "@types/morgan": "^1.9.9",
     "@types/uuid": "^9.0.8",
-    "@types/winston": "^2.4.4",
     "nodemon": "^3.1.0",
     "ts-node": "^10.9.2",
-    "ts-node-dev": "^2.0.0",
     "typescript": "^5.4.2"
   }
 }

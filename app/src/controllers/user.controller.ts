@@ -67,6 +67,7 @@ export const createUser = async(req: Request, res: Response) => {
         return res.status(201).json({
             status: 201,
             success: true,
+            user: newUser,
             message: "User created successfully."
         });
     } catch (error) {
@@ -87,6 +88,8 @@ export const updateUser = async(req: Request, res: Response) => {
             username,
             age,
             hobbies
+        }, {
+            new: true
         }).exec();
         if(!updateUser) return res.status(404).json({
             status: 404,
@@ -97,6 +100,7 @@ export const updateUser = async(req: Request, res: Response) => {
         return res.status(200).json({
             status: 200,
             success: true,
+            user: updateUser,
             message: "User updated successfully."
         })
     } catch (error) {
