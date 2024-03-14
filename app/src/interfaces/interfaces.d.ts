@@ -1,11 +1,13 @@
-import { Document } from "mongoose";
-import { Types } from "mongoose";
-
-export interface IUser extends Document {
-    id: Types.ObjectId;
+export interface IUser {
+    userId?: string,
     username: string;
     age: number;
     hobbies: string[]
 }
 
-export interface IResponse {}
+export interface IResponse {
+    status: number,
+    success: boolean,
+    users: IUser[],
+    user: IUser
+}
